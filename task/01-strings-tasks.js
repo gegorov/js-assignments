@@ -202,7 +202,34 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-    throw new Error('Not implemented');
+  const topLft = '┌';
+  const topRght = '┐\n';
+  const btmLft = '└';
+  const btmRght = '┘\n';
+
+  const makeFirstLine = (storage) => {
+    const result = `${storage}${topLft}${width > 2 ? '─'.repeat(width - 2) : ''}${topRght}`;
+    return result;
+  };
+
+  const makeLastLine = (storage) => {
+    const result = `${storage}${btmLft}${width > 2 ? '─'.repeat(width - 2) : ''}${btmRght}`;
+    return result;
+  };
+  const drawMiddleLines = (storage) => {
+    const result = `${storage}│${width > 2 ? ' '.repeat(width - 2) : ''}│\n`;
+    return result;
+  };
+
+  let result = '';
+
+  result = makeFirstLine(result);
+  for (let h = 1; h < height - 1; h += 1) {
+    result = drawMiddleLines(result);
+  }
+  result = makeLastLine(result);
+
+  return result;
 }
 
 
