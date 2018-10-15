@@ -27,17 +27,17 @@ function findElement(arr, value) {
 
 /**
  * Generates an array of odd numbers of the specified length
- * 
+ *
  * @param {number} len
  * @return {array}
- * 
+ *
  * @example
- *    1 => [ 1 ] 
- *    2 => [ 1, 3 ] 
+ *    1 => [ 1 ]
+ *    2 => [ 1, 3 ]
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-   throw new Error('Not implemented');
+  return Array.from(new Array(len * 2), (v, i) => i + 1).filter(el => el % 2 !== 0);
 }
 
 
