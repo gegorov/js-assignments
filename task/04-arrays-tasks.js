@@ -356,13 +356,13 @@ function sortDigitNamesByNumericOrder(arr) {
 function getItemsSum(arr) {
   return arr.reduce((acc, item) => acc + item, 0);
 }
- 
-/** 
+
+/**
  * Returns the number of all falsy value in the specified array
- * 
+ *
  * @param {array} arr
  * @return {array}
- * 
+ *
  * @example
  *  [] => 0
  *  [ 1, '', 3 ] => 1
@@ -370,7 +370,7 @@ function getItemsSum(arr) {
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
  */
 function getFalsyValuesCount(arr) {
-   throw new Error('Not implemented');
+  return arr.filter(item => !item).length;
 }
 
 /**
