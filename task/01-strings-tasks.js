@@ -67,7 +67,8 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-  const result = value.match(/(?<=Hello,\s).*(?=!)/g);
+  // had to use replace because test are falling when i used regex lookbehind
+  const result = value.replace(/Hello,\s/, '').match(/.*(?=!)/g); 
   return result[0];
 }
 
