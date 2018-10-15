@@ -152,16 +152,16 @@ function insertItem(arr, item, index) {
 
 /**
  * Returns the n first items of the specified array
- * 
+ *
  * @param {array} arr
- * @param {number} n 
- * 
+ * @param {number} n
+ *
  * @example
  *    [ 1, 3, 4, 5 ], 2  => [ 1, 2 ]
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'a', 'b', 'c' ]
  */
 function getHead(arr, n) {
-   throw new Error('Not implemented');
+  return arr.slice(0, n);
 }
 
 
