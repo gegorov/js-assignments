@@ -207,35 +207,37 @@ function toCsvText(arr) {
 /**
  * Transforms the numeric array into the according array of squares:
  *   f(x) = x * x
- * 
+ *
  * @param {array} arr
  * @return {array}
- * 
+ *
  * @example
  *   [ 0, 1, 2, 3, 4, 5 ] => [ 0, 1, 4, 9, 16, 25 ]
  *   [ 10, 100, -1 ]      => [ 100, 10000, 1 ]
  */
 function toArrayOfSquares(arr) {
-   throw new Error('Not implemented');
+  return arr.map(el => el * el);
 }
 
 
 /**
  * Transforms the numeric array to the according moving sum array:
- *     f[n] = x[0] + x[1] + x[2] +...+ x[n] 
+ *     f[n] = x[0] + x[1] + x[2] +...+ x[n]
  *  or f[n] = f[n-1] + x[n]
- * 
+ *
  * @param {array} arr
  * @return {array}
- * 
+ *
  * Example :
  *   [ 1, 1, 1, 1, 1 ]        => [ 1, 2, 3, 4, 5 ]
  *   [ 10, -10, 10, -10, 10 ] => [ 10, 0, 10, 0, 10 ]
- *   [ 0, 0, 0, 0, 0]         => [ 0, 0, 0, 0, 0] 
+ *   [ 0, 0, 0, 0, 0]         => [ 0, 0, 0, 0, 0]
  *   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]
  */
 function getMovingSum(arr) {
-   throw new Error('Not implemented');
+  const newArr = [];
+  arr.reduce((prev, curr,i) =>  newArr[i] = prev + curr, 0);
+  return newArr;
 }
 
 /**
