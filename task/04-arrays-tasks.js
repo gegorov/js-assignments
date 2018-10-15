@@ -67,7 +67,7 @@ function doubleArray(arr) {
  * @example
  *    [ 0, 1, 2, 3, 4, 5 ] => [ 1, 2, 3, 4, 5 ]
  *    [-1, 2, -5, -4, 0] => [ 2 ]
- *    [] => [] 
+ *    [] => []
  */
 function getArrayOfPositives(arr) {
   return arr.filter(el => el > 0);
@@ -123,16 +123,16 @@ function getUpperCaseStrings(arr) {
 
 /**
  * Returns the array of string lengths from the specified string array.
- * 
+ *
  * @param {array} arr
  * @return {array}
- * 
+ *
  * @example
  *    [ '', 'a', 'bc', 'def', 'ghij' ]  => [ 0, 1, 2, 3, 4 ]
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
-   throw new Error('Not implemented');
+  return arr.map(item => item.length);
 }
 
 /**
