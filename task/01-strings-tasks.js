@@ -250,7 +250,27 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-    throw new Error('Not implemented');
+  const tmp = str.split('');
+
+  const mapper = (el) => {
+    const lStart = 96;
+    const lEnd = 122;
+    const uStart = 64;
+    const uEnd = 90;
+    const SHIFT = 13;
+    const ascii = el.charCodeAt();
+    if (ascii > lStart && ascii <= lEnd) {
+      const newCharCode = ascii + SHIFT > lEnd ? ascii + SHIFT - lEnd + lStart : ascii + SHIFT;
+      return String.fromCharCode(newCharCode);
+    }
+    if (ascii > uStart && ascii <= uEnd) {
+      const newCharCode = ascii + SHIFT > uEnd ? ascii + SHIFT - uEnd + uStart : ascii + SHIFT;
+      return String.fromCharCode(newCharCode);
+    }
+    return el;
+  };
+
+  return tmp.map(mapper).join('');
 }
 
 /**
