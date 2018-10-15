@@ -222,9 +222,7 @@ function getRectangleString(width, height) {
     return result;
   };
 
-  let result = '';
-
-  result = makeFirstLine(result);
+  let result = makeFirstLine('');
   for (let h = 1; h < height - 1; h += 1) {
     result = drawMiddleLines(result);
   }
