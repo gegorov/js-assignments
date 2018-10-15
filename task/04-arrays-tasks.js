@@ -311,12 +311,12 @@ function getPositivesCount(arr) {
   return arr.reduce((acc, item) => (parseInt(item, 10) === item && item > 0 ? acc + 1 : acc), 0);
 }
 
-/** 
+/**
  * Sorts digit names
- * 
+ *
  * @param {array} arr
  * @return {array}
- * 
+ *
  * @example
  *   [] => []
  *   [ 'nine','one' ]                 => [ 'one', 'nine' ]
@@ -325,7 +325,20 @@ function getPositivesCount(arr) {
  *   [ 'one','one','one','zero' ]     => [ 'zero','one','one','one' ]
  */
 function sortDigitNamesByNumericOrder(arr) {
-   throw new Error('Not implemented');
+  const digitList = {
+    zero: 0,
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4,
+    five: 5,
+    six: 6,
+    seven: 7,
+    eight: 8,
+    nine: 9,
+    ten: 10,
+  };
+  return arr.slice().sort((a, b) => digitList[a] - digitList[b]);
 }
 
 /** 
