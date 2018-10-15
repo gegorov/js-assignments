@@ -95,14 +95,14 @@ function getArrayOfStrings(arr) {
  *
  * @param {array} arr
  * @return {array}
- * 
+ *
  * @example
  *    [ 0, false, 'cat', NaN, true, '' ] => [ 'cat', true ]
  *    [ 1, 2, 3, 4, 5, 'false' ]         => [ 1, 2, 3, 4, 5, 'false' ]
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
 function removeFalsyValues(arr) {
-   throw new Error('Not implemented');
+  return arr.filter(Boolean);
 }
 
 /**
