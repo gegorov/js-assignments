@@ -75,24 +75,24 @@ function getArrayOfPositives(arr) {
 
 /**
  * Returns the array with strings only in the specified array (in original order)
- * 
+ *
  * @param {array} arr
  * @return {array}
- * 
+ *
  * @example
  *    [ 0, 1, 'cat', 3, true, 'dog' ] => [ 'cat', 'dog' ]
  *    [ 1, 2, 3, 4, 5 ] => []
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
-   throw new Error('Not implemented');
+  return arr.filter(el => typeof el === 'string' || el instanceof String);
 }
 
 /**
  * Removes falsy values from the specified array
  * Falsy values: false, null, 0, "", undefined, and NaN.
  * (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description)
- * 
+ *
  * @param {array} arr
  * @return {array}
  * 
