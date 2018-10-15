@@ -273,9 +273,9 @@ function propagateItemsByPositionIndex(arr) {
 }
 
 
-/** 
+/**
  * Returns the 3 largest numbers from the specified array
- * 
+ *
  * @param {array} arr
  * @return {array}
  *
@@ -287,10 +287,10 @@ function propagateItemsByPositionIndex(arr) {
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
  */
 function get3TopItems(arr) {
-   throw new Error('Not implemented');
+  return arr.slice().sort((a, b) => b - a).filter((_, index) => index < 3);
 }
- 
- 
+
+
 /**  
  * Returns the number of positive numbers from specified array
  * 
