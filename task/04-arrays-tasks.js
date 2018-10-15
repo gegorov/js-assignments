@@ -341,12 +341,12 @@ function sortDigitNamesByNumericOrder(arr) {
   return arr.slice().sort((a, b) => digitList[a] - digitList[b]);
 }
 
-/** 
+/**
  * Returns the sum of all items in the specified array of numbers
- * 
+ *
  * @param {array} arr
  * @return {number}
- * 
+ *
  * @example
  *   [] => 0
  *   [ 1, 2, 3 ]           => 6
@@ -354,7 +354,7 @@ function sortDigitNamesByNumericOrder(arr) {
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
 function getItemsSum(arr) {
-   throw new Error('Not implemented');
+  return arr.reduce((acc, item) => acc + item, 0);
 }
  
 /** 
