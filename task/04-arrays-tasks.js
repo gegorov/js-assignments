@@ -60,17 +60,17 @@ function doubleArray(arr) {
 
 /**
  * Returns an array of positive numbers from the specified array in original order
- * 
+ *
  * @param {array} arr
  * @return {array}
- * 
+ *
  * @example
  *    [ 0, 1, 2, 3, 4, 5 ] => [ 1, 2, 3, 4, 5 ]
  *    [-1, 2, -5, -4, 0] => [ 2 ]
  *    [] => [] 
  */
 function getArrayOfPositives(arr) {
-   throw new Error('Not implemented');
+  return arr.filter(el => el > 0);
 }
 
 /**
