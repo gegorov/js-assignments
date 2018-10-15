@@ -291,12 +291,12 @@ function get3TopItems(arr) {
 }
 
 
-/**  
+/**
  * Returns the number of positive numbers from specified array
- * 
+ *
  * @param {array} arr
  * @return {number}
- * 
+ *
  * @example
  *   [ ]          => 0
  *   [ -1, 0, 1 ] => 1
@@ -305,9 +305,12 @@ function get3TopItems(arr) {
  *   [ 1, '2' ] => 1
  */
 function getPositivesCount(arr) {
-   throw new Error('Not implemented');
+  if (arr.length === 0) {
+    return 0;
+  }
+  return arr.reduce((acc, item) => (parseInt(item, 10) === item && item > 0 ? acc + 1 : acc), 0);
 }
- 
+
 /** 
  * Sorts digit names
  * 
