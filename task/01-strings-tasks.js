@@ -1,13 +1,11 @@
 'use strict';
 
-/********************************************************************************************
- *                                                                                          *
- * Plese read the following tutorial before implementing tasks:                             *
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String  *
- *                                                                                          *
- ********************************************************************************************/
-
-
+/** ******************************************************************************************
+ *                                                                                           *
+ * Plese read the following tutorial before implementing tasks:                              *
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String   *
+ *                                                                                           *
+ ******************************************************************************************* */
 
 /**
  * Returns the result of concatenation of two strings.
@@ -22,7 +20,7 @@
  *   '',  'bb'  => 'bb'
  */
 function concatenateStrings(value1, value2) {
-    throw new Error('Not implemented');
+  return value1.concat(value2);
 }
 
 
