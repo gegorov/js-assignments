@@ -137,17 +137,17 @@ function getStringsLength(arr) {
 
 /**
  * Inserts the item into specified array at specified index
- * 
+ *
  * @param {array} arr
  * @param {any} item
- * @param {number} index 
- * 
+ * @param {number} index
+ *
  * @example
  *    [ 1, 3, 4, 5 ], 2, 1  => [ 1, 2, 3, 4, 5 ]
  *    [ 1, 'b', 'c'], 0, 'x'  => [ 'x', 1, 'b', 'c' ]
  */
 function insertItem(arr, item, index) {
-   throw new Error('Not implemented');
+  arr.splice(index, 0, item);
 }
 
 /**
