@@ -408,11 +408,12 @@ function toStringList(arr) {
 
 
 /**
- * Sorts the specified array by country name first and city name (if countries are equal) in ascending order.
- * 
+ * Sorts the specified array by country name first and city name (if countries are equal) in
+ * ascending order.
+ *
  * @param {array} arr
  * @return {array}
- * 
+ *
  * @example
  *    [
  *      { country: 'Russia',  city: 'Moscow' },
@@ -421,7 +422,7 @@ function toStringList(arr) {
  *      { country: 'Russia',  city: 'Saint Petersburg' },
  *      { country: 'Poland',  city: 'Krakow' },
  *      { country: 'Belarus', city: 'Brest' }
- *    ]  
+ *    ]
  *                      =>
  *    [
  *      { country: 'Belarus', city: 'Brest' },
@@ -432,7 +433,18 @@ function toStringList(arr) {
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  */
 function sortCitiesArray(arr) {
-   throw new Error('Not implemented');
+  return arr.slice().sort((a, b) => {
+    if (a.country === b.country) {
+      if (a.city > b.city) {
+        return 1;
+      }
+      return -1;
+    }
+    if (a.country > b.country) {
+      return 1;
+    }
+    return -1;
+  });
 }
 
 /**
