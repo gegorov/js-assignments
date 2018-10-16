@@ -471,11 +471,11 @@ function getIdentityMatrix(n) {
 
 /**
  * Creates an array of integers from the specified start to end (inclusive)
- * 
+ *
  * @param {number} start
  * @param {number} end
  * @return {array}
- * 
+ *
  * @example
  *     1, 5  => [ 1, 2, 3, 4, 5 ]
  *    -2, 2  => [ -2, -1, 0, 1, 2 ]
@@ -483,7 +483,8 @@ function getIdentityMatrix(n) {
  *     3, 3   => [ 3 ]
  */
 function getIntervalArray(start, end) {
-   throw new Error('Not implemented');
+  const length = Math.abs(Math.ceil((end - start) + 1));
+  return Array(length).fill().map((v, i) => start + i);
 }
 
 /**
