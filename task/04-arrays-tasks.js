@@ -449,24 +449,24 @@ function sortCitiesArray(arr) {
 
 /**
  * Creates an indentity matrix of the specified size
- * 
+ *
  * @param {number} n
  * @return {array}
- * 
+ *
  * @example
  *     1  => [[1]]
- *  
+ *
  *     2 => [[1,0],
  *           [0,1]]
- * 
+ *
  *          [[1,0,0,0,0],
  *           [0,1,0,0,0],
  *     5 =>  [0,0,1,0,0],
  *           [0,0,0,1,0],
- *           [0,0,0,0,1]]   
+ *           [0,0,0,0,1]]
  */
 function getIdentityMatrix(n) {
-   throw new Error('Not implemented');
+  return Array(n).fill(Array(n).fill()).map((row, i) => row.map((col, j) => (i === j ? 1 : 0)));
 }
 
 /**
