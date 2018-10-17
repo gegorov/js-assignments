@@ -521,19 +521,32 @@ function distinct(arr) {
  *      { country: 'Belarus', city: 'Grodno' },
  *      { country: 'Belarus', city: 'Minsk' },
  *      { country: 'Poland', city: 'Lodz' }
- *     ], 
- *     item => item.country, 
+ *     ],
+ *     item => item.country,
  *     item => item.city
  *   )
- *            => 
+ *            =>
  *   Map {
  *    "Belarus" => ["Brest", "Grodno", "Minsk"],
- *    "Russia" => ["Omsk", "Samara"], 
+ *    "Russia" => ["Omsk", "Samara"],
  *    "Poland" => ["Lodz"]
  *   }
  */
 function group(array, keySelector, valueSelector) {
-   throw new Error('Not implemented');
+  const getCountries = (acc, curr) => (
+    acc.includes(keySelector(curr))
+      ? acc
+      : acc.concat(keySelector(curr)));
+
+  return new Map(
+    array.reduce(getCountries, []).map(
+      country => ([
+        country,
+        array.reduce((acc, curr) => (
+          keySelector(curr) === country ? acc.concat(valueSelector(curr)) : acc), []),
+      ]),
+    ),
+  );
 }
 
 
