@@ -113,7 +113,7 @@ function getLinearEquationRoot(a, b) {
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
   return Math.acos(
-    (x1 * x2 + y1 * y2) / Math.sqrt((x1 ** 2) + (y1 ** 2)) * Math.sqrt((x2 ** 2) + (y2 ** 2))
+    (x1 * x2 + y1 * y2) / Math.sqrt((x1 ** 2) + (y1 ** 2)) * Math.sqrt((x2 ** 2) + (y2 ** 2)),
   );
 }
 
@@ -162,8 +162,9 @@ function parseNumberFromString(value) {
  *   3,3,3   => 5.196152422706632
  *   1,2,3   => 3.741657386773941
  */
-function getParallelipidedDiagonal(a,b,c) {
-    throw new Error('Not implemented');
+function getParallelipidedDiagonal(a, b, c) {
+  console.log(a, b, c);
+  return Math.sqrt((a ** 2) + (b ** 2) + (c ** 2));
 }
 
 /**
