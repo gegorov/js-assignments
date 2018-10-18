@@ -82,9 +82,10 @@ function timeSpanToString(startDate, endDate) {
 
 
 /**
- * Returns the angle (in radians) between the hands of an analog clock for the specified Greenwich time.
+ * Returns the angle (in radians) between the hands of an analog clock for the specified
+ * Greenwich time.
  * If you have problem with solution please read: https://en.wikipedia.org/wiki/Clock_angle_problem
- * 
+ *
  * @param {date} date
  * @return {number}
  *
@@ -95,14 +96,15 @@ function timeSpanToString(startDate, endDate) {
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
 function angleBetweenClockHands(date) {
-    throw new Error('Not implemented');
+  const angle = Math.abs(0.5 * (60 * (date.getUTCHours() % 12) - 11 * date.getUTCMinutes()));
+  return angle > 180 ? (360 - angle) * Math.PI / 180 : angle * Math.PI / 180;
 }
 
 
 module.exports = {
-    parseDataFromRfc2822: parseDataFromRfc2822,
-    parseDataFromIso8601: parseDataFromIso8601,
-    isLeapYear: isLeapYear,
-    timeSpanToString: timeSpanToString,
-    angleBetweenClockHands: angleBetweenClockHands
+  parseDataFromRfc2822,
+  parseDataFromIso8601,
+  isLeapYear,
+  timeSpanToString,
+  angleBetweenClockHands,
 };
