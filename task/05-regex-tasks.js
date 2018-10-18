@@ -1,11 +1,11 @@
-'use strict';
+// 'use strict';
 
-/********************************************************************************************
- *                                                                                          *
- * Plese read the following tutorial before implementing tasks:                             *
- * https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions           *
- *                                                                                          *
- ********************************************************************************************/
+/** ******************************************************************************************
+ *                                                                                           *
+ * Plese read the following tutorial before implementing tasks:                              *
+ * https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions            *
+ *                                                                                           *
+ ******************************************************************************************* */
 
 
 /**
@@ -31,7 +31,7 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
-   throw new Error('Not implemented');
+  return /{([0-9a-fA-F]{8})(-[0-9a-fA-F]{4}){3}-([0-9a-fA-F]{12})\}/;
 }
 
 
@@ -53,7 +53,7 @@ function getRegexForGuid() {
  *
  */
 function getRegexForPitSpot() {
-   throw new Error('Not implemented');
+  return /[a-z]*p.t\w*/;
 }
 
 
