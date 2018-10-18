@@ -193,7 +193,7 @@ function roundToPowerOfTen(num, pow) {
  *
  * @param {number} n
  * @return {bool}
- * 
+ *
  * @example:
  *   4 => false
  *   5 => true
@@ -205,7 +205,7 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-    throw new Error('Not implemented');
+  return !(Array(n + 1).join(1).match(/^1?$|^(11+?)\1+$/));
 }
 
 /**
