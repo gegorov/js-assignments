@@ -224,20 +224,20 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-    throw new Error('Not implemented');
+  return Number.isNaN(parseFloat(value)) ? def : parseFloat(value);
 }
 
 module.exports = {
-    getRectangleArea: getRectangleArea,
-    getCicleCircumference: getCicleCircumference,
-    getAverage: getAverage,
-    getDistanceBetweenPoints: getDistanceBetweenPoints,
-    getLinearEquationRoot: getLinearEquationRoot,
-    getAngleBetweenVectors: getAngleBetweenVectors,
-    getLastDigit: getLastDigit,
-    parseNumberFromString: parseNumberFromString,
-    getParallelipidedDiagonal: getParallelipidedDiagonal,
-    roundToPowerOfTen: roundToPowerOfTen,
-    isPrime: isPrime,
-    toNumber: toNumber
+  getRectangleArea,
+  getCicleCircumference,
+  getAverage,
+  getDistanceBetweenPoints,
+  getLinearEquationRoot,
+  getAngleBetweenVectors,
+  getLastDigit,
+  parseNumberFromString,
+  getParallelipidedDiagonal,
+  roundToPowerOfTen,
+  isPrime,
+  toNumber,
 };
