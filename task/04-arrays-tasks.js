@@ -574,10 +574,10 @@ function selectMany(arr, childrenSelector) {
  * @param {array} arr
  * @param {array} indexes
  * @return {any} element from array
- * 
+ *
  * @example
- *   [[1, 2], [3, 4], [5, 6]], [0,0]  => 1        (arr[0][0]) 
- *   ['one','two','three'], [2]       => 'three'  (arr[2]) 
+ *   [[1, 2], [3, 4], [5, 6]], [0,0]  => 1        (arr[0][0])
+ *   ['one','two','three'], [2]       => 'three'  (arr[2])
  *   [[[ 1, 2, 3]]], [ 0, 0, 1 ]      => 2        (arr[0][0][1])
  */
 function getElementByIndexes(arr, indexes) {
@@ -589,22 +589,31 @@ function getElementByIndexes(arr, indexes) {
  * Swaps the head and tail of the specified array:
  * the head (first half) of array move to the end, the tail (last half) move to the start. 
  * The middle element (if exists) leave on the same position.
- * 
- *  
+ *
+ *
  * @param {array} arr
  * @return {array}
- * 
+ *
  * @example
  *   [ 1, 2, 3, 4, 5 ]   =>  [ 4, 5, 3, 1, 2 ]
- *    \----/   \----/         
- *     head     tail 
+ *    \----/   \----/
+ *     head     tail
  *
- *   [ 1, 2 ]  => [ 2, 1 ] 
- *   [ 1, 2, 3, 4, 5, 6, 7, 8 ]   =>  [ 5, 6, 7, 8, 1, 2, 3, 4 ]   
- * 
+ *   [ 1, 2 ]  => [ 2, 1 ]
+ *   [ 1, 2, 3, 4, 5, 6, 7, 8 ]   =>  [ 5, 6, 7, 8, 1, 2, 3, 4 ]
+ *
  */
 function swapHeadAndTail(arr) {
-    throw new Error('Not implemented');
+  const len = arr.length;
+  if (len < 2) {
+    return arr;
+  }
+
+  return len % 2 === 0
+    ? arr.slice(len / 2).concat(arr.slice(0, len / 2))
+    : arr.slice(Math.round(len / 2))
+      .concat(arr[Math.floor(len / 2)])
+      .concat(arr.slice(0, Math.floor(len / 2)));
 }
 
 
