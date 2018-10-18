@@ -587,7 +587,7 @@ function getElementByIndexes(arr, indexes) {
 
 /**
  * Swaps the head and tail of the specified array:
- * the head (first half) of array move to the end, the tail (last half) move to the start. 
+ * the head (first half) of array move to the end, the tail (last half) move to the start.
  * The middle element (if exists) leave on the same position.
  *
  *
@@ -618,35 +618,35 @@ function swapHeadAndTail(arr) {
 
 
 module.exports = {
-    findElement: findElement,
-    generateOdds: generateOdds,
-    doubleArray: doubleArray,
-    getArrayOfPositives: getArrayOfPositives,
-    getArrayOfStrings: getArrayOfStrings,
-    removeFalsyValues: removeFalsyValues,
-    getUpperCaseStrings: getUpperCaseStrings,
-    getStringsLength: getStringsLength,
-    insertItem: insertItem,
-    getHead: getHead,
-    getTail: getTail,
-    toCsvText: toCsvText,
-    toStringList: toStringList,
-    toArrayOfSquares: toArrayOfSquares,
-    getMovingSum: getMovingSum,
-    getSecondItems: getSecondItems,
-    propagateItemsByPositionIndex: propagateItemsByPositionIndex,
-    get3TopItems: get3TopItems,
-    getPositivesCount: getPositivesCount,
-    sortDigitNamesByNumericOrder: sortDigitNamesByNumericOrder,
-    getItemsSum: getItemsSum,
-    getFalsyValuesCount: getFalsyValuesCount,
-    findAllOccurences: findAllOccurences,
-    sortCitiesArray: sortCitiesArray,
-    getIdentityMatrix: getIdentityMatrix,
-    getIntervalArray: getIntervalArray,
-    distinct: distinct,
-    group: group,
-    selectMany: selectMany,
-    getElementByIndexes: getElementByIndexes,
-    swapHeadAndTail: swapHeadAndTail
+  findElement,
+  generateOdds,
+  doubleArray,
+  getArrayOfPositives,
+  getArrayOfStrings,
+  removeFalsyValues,
+  getUpperCaseStrings,
+  getStringsLength,
+  insertItem,
+  getHead,
+  getTail,
+  toCsvText,
+  toStringList,
+  toArrayOfSquares,
+  getMovingSum,
+  getSecondItems,
+  propagateItemsByPositionIndex,
+  get3TopItems,
+  getPositivesCount,
+  sortDigitNamesByNumericOrder,
+  getItemsSum,
+  getFalsyValuesCount,
+  findAllOccurences,
+  sortCitiesArray,
+  getIdentityMatrix,
+  getIntervalArray,
+  distinct,
+  group,
+  selectMany,
+  getElementByIndexes,
+  swapHeadAndTail,
 };
