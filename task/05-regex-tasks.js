@@ -116,14 +116,14 @@ function getRegexForSSN() {
  *   'Pa55'.match(validator) => false
  */
 function getPasswordValidator(minLength) {
-   throw new Error('Not implemented');
+  return new RegExp(`^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)[a-zA-Z\\d]{${minLength},}$`);
 }
 
 
 module.exports = {
-    getRegexForGuid: getRegexForGuid,
-    getRegexForPitSpot: getRegexForPitSpot,
-    getRegexForIPv4: getRegexForIPv4,
-    getRegexForSSN: getRegexForSSN,
-    getPasswordValidator: getPasswordValidator
+  getRegexForGuid,
+  getRegexForPitSpot,
+  getRegexForIPv4,
+  getRegexForSSN,
+  getPasswordValidator,
 };
