@@ -1,12 +1,12 @@
 // 'use strict';
 
-/** ************************************************************************************************
+/** ***********************************************************************************************
  *                                                                                                *
  * Plese read the following tutorial before implementing tasks:                                   *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling  *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration              *
  *                                                                                                *
- ************************************************************************************************* */
+ ************************************************************************************************ */
 
 
 /**
@@ -83,7 +83,8 @@ function getSumBetweenNumbers(n1, n2) {
 
 
 /**
- * Returns true, if a triangle can be built with the specified sides a,b,c and false in any other ways.
+ * Returns true, if a triangle can be built with the specified sides a,b,c and false in any other
+ * ways.
  *
  * @param {number} a
  * @param {number} b
@@ -96,8 +97,8 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,1,1   =>  false
  *   10,10,10 =>  true
  */
-function isTriangle(a,b,c) {
-    throw new Error('Not implemented');
+function isTriangle(a, b, c) {
+  return a + b > c && a + c > b && b + c > a;
 }
 
 
