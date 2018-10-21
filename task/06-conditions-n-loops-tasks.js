@@ -282,7 +282,20 @@ function reverseInteger(num) {
  *   4916123456789012 => false
  */
 function isCreditCardNumber(ccn) {
-    throw new Error('Not implemented');
+  // const ccnStr = `${ccn}`;
+  const luhnArr = [0, 2, 4, 6, 8, 1, 3, 5, 7, 9];
+  let counter = 0;
+  let incNum;
+  let odd = false;
+  const temp = String(ccn).replace(/[^\d]/g, '');
+  if (temp.length === 0) {
+    return false;
+  }
+  for (let i = temp.length - 1; i >= 0; i -= 1) {
+    incNum = parseInt(temp.charAt(i), 10);
+    counter += ((odd = !odd) ? incNum : luhnArr[incNum]); //eslint-disable-line
+  }
+  return (counter % 10 === 0);
 }
 
 
